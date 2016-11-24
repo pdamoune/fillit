@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   struct.h                                           :+:      :+:    :+:   */
+/*   ft_displaytetri.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/22 15:38:35 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/24 10:46:09 by pdamoune         ###   ########.fr       */
+/*   Created: 2016/11/24 09:20:38 by pdamoune          #+#    #+#             */
+/*   Updated: 2016/11/24 09:58:13 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRUCT_H
-# define STRUCT_H
-# include "fillit.h"
+#include "fillit.h"
 
-typedef struct s_tetri	t_tetri;
-struct		s_tetri
+void	ft_displaytetri(t_list *tetri)
 {
-	char	nom;
-	char	*y0;
-	char	*y1;
-	char	*y2;
-	char	*y3;
-};
+	t_list	*tmp;
 
-t_tetri		*ft_struct(char **coordonnes, unsigned char name);
-void		ft_displaytetri(t_list *tetri);
-void 		ft_move_block(char *y0, char *y1, char *y2, char *y3);
-void		ft_move_tetri(t_list *tetri);
-
-#endif
+	tmp = tetri;
+	while(tmp->next)
+	{
+		ft_putchar(((t_tetri *)tmp->content)->nom);
+		ft_putendl("");
+		ft_putendl(((t_tetri *)tmp->content)->y0);
+		ft_putendl(((t_tetri *)tmp->content)->y1);
+		ft_putendl(((t_tetri *)tmp->content)->y2);
+		ft_putendl(((t_tetri *)tmp->content)->y3);
+		ft_putendl("");
+		tmp = tmp->next;
+	}
+}

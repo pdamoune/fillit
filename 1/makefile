@@ -11,8 +11,8 @@
 # **************************************************************************** #
 
 NAME		=	fillit
-SOURCES		=	main.c ft_fillit.c ft_is_tetri.c ft_is_good.c \
-$(PATHLIB)/libft.a
+SOURCES		=	main.c ft_fillit.c ft_is_tetri.c ft_is_good.c ft_struct.c \
+ft_displaytetri.c ft_move_tetri.c ft_move_block.c $(PATHLIB)/libft.a
 HEADERS		=	libft.h fillit.h
 PATHLIB		=	libft
 PATHSRC 	=	src
