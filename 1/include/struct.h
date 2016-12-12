@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 15:38:35 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/24 10:46:09 by pdamoune         ###   ########.fr       */
+/*   Updated: 2016/11/29 02:32:19 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ struct		s_tetri
 
 t_tetri		*ft_struct(char **coordonnes, unsigned char name);
 void		ft_displaytetri(t_list *tetri);
-void 		ft_move_block(char *y0, char *y1, char *y2, char *y3);
-void		ft_move_tetri(t_list *tetri);
+// void 		ft_move_block(char *y0, char *y1, char *y2, char *y3);
+// void		ft_move_tetri(t_list *tetri);
 
 #endif
