@@ -6,48 +6,31 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 12:40:29 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/29 09:19:39 by pdamoune         ###   ########.fr       */
+/*   Updated: 2016/12/21 00:52:51 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "../include/fillit.h"
+#include <stdio.h>
 
-t_list	*ft_istetri(int fd)
+char	*ft_istetri(int fd, int ext)
 {
-	char			str[21];
-	char			*tmp;
-	int				i;
-	// t_tetri			*tetri;
-	// int				name_struct;
+	char			buf[21];
 
-	// name_struct = 'A';
-	i = 0;
-	ft_bzero(str, 22);
-	while (read(fd, str, 21) > 0)
+	ft_bzero(buf, 22);
+	while (read(fd, buf, 21) > 0)
 	{
-		i = 0;
-		tmp = ft_strdup(str);
-		if (!(tmp = ft_is_good(tmp)))
+		if (!ft_parsing(buf))
 			return (0);
-		while (tmp[i++] != '#')
-		{
-			if (i == 4)
-			{
-				if (tmp[0] == '.' && tmp[4] == '.' && tmp[8] == '.' && tmp[12] != '#')
-					tmp = tmp + 1;
-				tmp = &tmp[4];
-				i = 0;
-			}
-		}
-		ft_putendl(tmp);
-		// ft_putendl(tmp);
-		ft_putnbr(i);
-
-
-		// if (name_struct == 'A')
-		// 	tetri = ft_struct(ft_strsplit(tmp, '\n'), name_struct);
-		// ft_displaytetri(tetri);
+		while (buf[0] == '.' && buf[4] == '.' && buf[8] == '.'
+			&& buf[12] != '#')
+				ft_strcpy(buf, buf + 1);
+		while (buf[0] == '.' && buf[1] == '.' && buf[2] == '.'
+			&& buf[3] == '.')
+				ft_strcpy(buf, &buf[4]);
+		*(ft_strrchr(buf, '#') + 1) = 0;
+		ft_putendl_fd(buf, ext);
+		ft_bzero(buf, 22);
 	}
-		//tmp = ft_conv_bin(tmp, '#', '.');
-	return (0);
+	return ("coucou");
 }
