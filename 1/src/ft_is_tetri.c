@@ -6,18 +6,21 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 12:40:29 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/12/21 00:52:51 by pdamoune         ###   ########.fr       */
+/*   Updated: 2016/12/29 14:55:41 by philippedamoune  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fillit.h"
 #include <stdio.h>
 
-char	*ft_istetri(int fd, int ext)
+int 	ft_istetri(int fd, char **lst_tetri)
 {
 	char			buf[21];
+	int				letter;
 
+	letter = 'A';
 	ft_bzero(buf, 22);
+	ft_bzero(lst_tetri, 26);
 	while (read(fd, buf, 21) > 0)
 	{
 		if (!ft_parsing(buf))
@@ -29,8 +32,13 @@ char	*ft_istetri(int fd, int ext)
 			&& buf[3] == '.')
 				ft_strcpy(buf, &buf[4]);
 		*(ft_strrchr(buf, '#') + 1) = 0;
-		ft_putendl_fd(buf, ext);
+		while (ft_strchr(buf, '#'))
+			*ft_strchr(buf, '#') = letter;
+		lst_tetri[letter - 65] = ft_strdup(buf);
 		ft_bzero(buf, 22);
+		letter++;
 	}
-	return ("coucou");
+	lst_tetri[letter - 65] = ft_strdup(buf);
+
+	return (ft_sqrt_min((letter - 65) * 4));
 }

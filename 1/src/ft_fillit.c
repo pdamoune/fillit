@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 10:57:50 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/12/21 00:54:49 by pdamoune         ###   ########.fr       */
+/*   Updated: 2016/12/31 15:24:23 by philippedamoune  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,24 @@
 void	ft_fillit(char *argv)
 {
 	int		fd;
-	int		ext;
+	int		sqrt_min;
+	char	*lst_tetri[25];
+
 	// char	*tetri;
 
+	ft_bzero(lst_tetri, 26);
 	fd = open(argv, O_RDONLY);
-	ext = open("extern_file.txt", O_TRUNC | O_RDWR);
     if (fd == -1)
 		exit(1);
-	ft_istetri(fd, ext);
+	sqrt_min = ft_istetri(fd, lst_tetri);
+	close(fd);
+	sqrt_min *= sqrt_min;
+
+	ft_putendl(""), ft_putnbr(ft_solver(lst_tetri, sqrt_min));
 
 	// ft_move_tetri(tetri);
 	// if (tetri != NULL)
 	// 	ft_displaytetri(tetri);
 	ft_putendl("");
-	close(ext);
-	close(fd);
+
 }

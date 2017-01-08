@@ -12,7 +12,7 @@
 
 NAME		=	fillit
 SOURCES		=	main.c ft_fillit.c ft_is_tetri.c ft_parsing.c ft_struct.c \
-$(PATHLIB)/libft.a
+ft_solver.c ft_get_next_line.c $(PATHLIB)/libft.a
 HEADERS		=	libft.h fillit.h
 PATHLIB		=	libft
 PATHSRC 	=	src
