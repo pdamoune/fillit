@@ -6,11 +6,12 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 10:57:50 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/12/31 15:24:23 by philippedamoune  ###   ########.fr       */
+/*   Updated: 2017/01/09 15:36:50 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fillit.h"
+#include <stdio.h>
 
 void	ft_fillit(char *argv)
 {
@@ -24,15 +25,11 @@ void	ft_fillit(char *argv)
 	fd = open(argv, O_RDONLY);
     if (fd == -1)
 		exit(1);
-	sqrt_min = ft_istetri(fd, lst_tetri);
-	close(fd);
+	if ((sqrt_min = ft_is_tetri(fd, lst_tetri)) == 0)
+		ft_putendl("grille mauvaise");
 	sqrt_min *= sqrt_min;
-
-	ft_putendl(""), ft_putnbr(ft_solver(lst_tetri, sqrt_min));
-
-	// ft_move_tetri(tetri);
-	// if (tetri != NULL)
-	// 	ft_displaytetri(tetri);
-	ft_putendl("");
+	printf("grille : %d\n\n", sqrt_min);
+	ft_solver(lst_tetri, sqrt_min);
+	close(fd);
 
 }

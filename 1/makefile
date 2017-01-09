@@ -11,9 +11,8 @@
 # **************************************************************************** #
 
 NAME		=	fillit
-SOURCES		=	main.c ft_fillit.c ft_is_tetri.c ft_parsing.c ft_struct.c \
-ft_solver.c ft_get_next_line.c $(PATHLIB)/libft.a
-HEADERS		=	libft.h fillit.h
+SOURCES		=	main.c ft_fillit.c ft_is_tetri.c ft_parsing.c \
+ft_solver.c $(PATHLIB)/libft.a
 PATHLIB		=	libft
 PATHSRC 	=	src
 PATHINC		=	include
@@ -30,10 +29,14 @@ $(NAME): library
 
 
 lib:
+		rm -rf libft
 		ln -s ~/Documents/42/projets_42/library libft
 
 library:
 		@make -C libft/
+
+clrlib:
+		@make fclean -C libft/
 
 clean:
 		rm -rf $(PATHOBJ)

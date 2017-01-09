@@ -6,14 +6,14 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 12:40:29 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/12/29 14:55:41 by philippedamoune  ###   ########.fr       */
+/*   Updated: 2017/01/09 18:48:20 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fillit.h"
 #include <stdio.h>
 
-int 	ft_istetri(int fd, char **lst_tetri)
+int 	ft_is_tetri(int fd, char **lst_tetri)
 {
 	char			buf[21];
 	int				letter;
@@ -39,6 +39,5 @@ int 	ft_istetri(int fd, char **lst_tetri)
 		letter++;
 	}
 	lst_tetri[letter - 65] = ft_strdup(buf);
-
-	return (ft_sqrt_min((letter - 65) * 4));
+	return (ft_sqrt_min((letter - 65) * 4) - 1);
 }

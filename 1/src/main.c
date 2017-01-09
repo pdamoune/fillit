@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 08:56:03 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/21 12:06:37 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/09 14:31:21 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "../include/fillit.h"
 
 int	main(int argc, char **argv)
 {
