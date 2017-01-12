@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME		=	fillit
-SOURCES		=	main.c ft_fillit.c ft_is_tetri.c ft_parsing.c \
+SOURCES		=	main.c ft_fillit.c ft_is_tetri.c ft_parsing.c ft_test.c \
 ft_solver.c $(PATHLIB)/libft.a
 PATHLIB		=	libft
 PATHSRC 	=	src
