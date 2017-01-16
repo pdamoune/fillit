@@ -17,7 +17,7 @@ PATHLIB		=	libft
 PATHSRC 	=	src
 PATHINC		=	include
 HEADERS		=	-I $(PATHINC) -I $(PATHLIB)/$(PATHINC)
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -g3
 CC			=	clang
 OBJETS		=	$(patsubst %.c,$(PATHSRC)/%.c,$(SOURCES))
 
@@ -25,7 +25,7 @@ all: $(NAME)
 
 $(NAME): library
 		@$(CC) $(CFLAGS) -o $(NAME) $(OBJETS) $(HEADERS)
-		./fillit extern_file1.txt
+
 
 
 lib:

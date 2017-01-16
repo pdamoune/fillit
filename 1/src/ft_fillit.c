@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 10:57:50 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/12 02:23:00 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/16 04:09:29 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,9 @@ void	ft_fillit(char *argv)
 	if ((sqrt_min = ft_is_tetri(fd, tetris, lst_tetri)) == 0)
 		ft_putendl("grille mauvaise");
 	sqrt_min *= sqrt_min;
-	printf("grille : %d\n\n", sqrt_min);
+	if (sqrt_min < 16)
+		sqrt_min = 16;
+	// printf("grille : %d\n\n", sqrt_min);
 	ft_solver(tetris, lst_tetri, sqrt_min);
 	close(fd);
 
