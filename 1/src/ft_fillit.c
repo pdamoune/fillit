@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 10:57:50 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/16 04:09:29 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/17 16:14:34 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ void	ft_fillit(char *argv)
 {
 	int		fd;
 	int		sqrt_min;
-	char	*lst_tetri[25];
-	char	*tetris[25];
+	char	*lst_tetri[26];
+	char	*tetris[26];
 
 	// char	*tetri;
 
-	ft_bzero(lst_tetri, 26);
-	ft_bzero(tetris, 26);
+	ft_bzero(lst_tetri, 27);
+	ft_bzero(tetris, 27);
 	fd = open(argv, O_RDONLY);
     if (fd == -1)
 		exit(1);

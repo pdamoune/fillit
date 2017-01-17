@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/11 23:22:29 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/16 03:14:43 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/17 18:39:11 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,12 @@ void 	ft_reinit(char **tetris, char **lst_tetri, int sqr_min)
 
 	i = 0;
 
-	while (*lst_tetri[i])
+	while (lst_tetri[i])
 	{
 		ft_memset(tetris[i], '.', sqr_min);
 		ft_strcpy(tetris[i], lst_tetri[i]);
 		*ft_strchr(tetris[i], '\0') = '.';
+		tetris[i][sqr_min] = 0;
 		i++;
 	}
 }
