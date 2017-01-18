@@ -6,7 +6,7 @@
 /*   By: philippe <philippe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/24 18:39:43 by philippe          #+#    #+#             */
-/*   Updated: 2017/01/17 19:57:51 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/18 02:35:08 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int		ft_test_combi(char **tetris, char **lst_tetri, char *result, int sqr_min)
 
 	while (tetris[i])
 	{
+		// ft_putendl(result);
 		//ft_putnbr(sqr_min), ft_putchar('='), ft_putendl(result);
 		if (i == -1)
 			return (0);
@@ -26,35 +27,30 @@ int		ft_test_combi(char **tetris, char **lst_tetri, char *result, int sqr_min)
 		{
 			i++;
 		}
-		else if (ft_move_tetri(tetris[i], sqr_min) != 0)
+		else if (ft_move_tetri(tetris[i], lst_tetri[i], sqr_min) != 0)
 		{
 			ft_test_combi(tetris, lst_tetri, result, sqr_min);
 		}
 		else
 		{
 			ft_remove_tetri(tetris[--i], result);
-			if (ft_move_tetri(tetris[i], sqr_min) == 0)
+			if (ft_move_tetri(tetris[i], lst_tetri[i], sqr_min) == 0)
 			{
 				if (i == 0)
 				{
-
 					// ft_putnbr(sqr_min), ft_putendl(result);
 					sqr_min = (ft_sqrt(sqr_min) + 1) * (ft_sqrt(sqr_min) + 1);
 					// ft_putendl(lst_tetri[0]);
 					ft_test(tetris, lst_tetri, sqr_min);
-					ft_putendl(tetris[1]);
-					DEB
-					ft_set_square(tetris, lst_tetri, result, sqr_min);
-					DEB
+					// ft_putendl(tetris[1]);
+					ft_bigger_square(tetris, lst_tetri, result, sqr_min);
 					ft_test_combi(tetris, lst_tetri, result, sqr_min);
-
-
 				}
 				else
 				{
 					ft_test(&tetris[i], &lst_tetri[i], sqr_min);
 					ft_remove_tetri(tetris[--i], result);
-					ft_move_tetri(tetris[i], sqr_min);
+					ft_move_tetri(tetris[i], lst_tetri[i], sqr_min);
 					ft_test_combi(tetris, lst_tetri, result, sqr_min);
 				}
 			}
@@ -65,7 +61,7 @@ int		ft_test_combi(char **tetris, char **lst_tetri, char *result, int sqr_min)
 
 int		ft_solver(char **tetris, char **lst_tetri, int sqr_min)
 {
-	char	result[196];
+	char	result[200];
 	int		i;
 	int		j;
 
@@ -88,11 +84,17 @@ int		ft_solver(char **tetris, char **lst_tetri, int sqr_min)
 	}
 	printf("result original = %s = %lu\n", result, ft_strlen(result));
 	ft_putendl("");
-	DEB
 
 	ft_set_square(tetris, lst_tetri, result, sqr_min);
-	ft_test_combi(tetris, lst_tetri, result, sqr_min);
-	DEB
+
+	// ft_test_combi(tetris, lst_tetri, result, sqr_min);
+	i = 0;
+	// while (i++ < 30)
+	// 	ft_move_tetri(tetris[9], lst_tetri[9], sqr_min);
+
+
+
+
 	i = 0;
 	ft_putendl("");
 	i = 0;
@@ -104,6 +106,7 @@ int		ft_solver(char **tetris, char **lst_tetri, int sqr_min)
 		printf("tetri modifie  = %s = %lu\n", tetris[i], ft_strlen(tetris[i]));
 		i++;
 	}
+	result[199] = 0;
 	printf("result modifie = %s = %lu\n", result, ft_strlen(result));
 	i = 0;
 	// while (lst_tetri[j])

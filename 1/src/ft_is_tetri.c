@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 12:40:29 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/17 16:10:29 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/18 02:45:20 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,9 @@ int 	ft_is_tetri(int fd, char **tetris, char **lst_tetri)
 		*(ft_strrchr(lst_tetri[letter - 65], letter) + 1) = 0;
 		ft_bzero(buf, 22);
 		letter++;
+
 	}
-	lst_tetri[letter - 65] = NULL;
-	tetris[letter - 65] = NULL;
+	lst_tetri[letter - 65] = ft_strdup("!");
+	tetris[letter - 65] = ft_strdup("!");
 	return (ft_sqrt_min((letter - 65) * 4));
 }

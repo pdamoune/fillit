@@ -13,12 +13,12 @@
 NAME		=	fillit
 SOURCES		=	main.c ft_fillit.c ft_is_tetri.c ft_parsing.c ft_test.c \
 ft_solver.c ft_remove_tetri.c ft_test_tetri.c ft_set_square.c ft_move_tetri.c \
-$(PATHLIB)/libft.a
+ft_bigger_square.c $(PATHLIB)/libft.a
 PATHLIB		=	libft
 PATHSRC 	=	src
 PATHINC		=	include
 HEADERS		=	-I $(PATHINC) -I $(PATHLIB)/$(PATHINC)
-CFLAGS		=	-Wall -Wextra -Werror -g3
+CFLAGS		=	-Wall -Wextra -Werror -g3 -fsanitize=address
 CC			=	clang
 OBJETS		=	$(patsubst %.c,$(PATHSRC)/%.c,$(SOURCES))
 
@@ -26,7 +26,7 @@ all: $(NAME)
 
 $(NAME): library
 		@$(CC) $(CFLAGS) -o $(NAME) $(OBJETS) $(HEADERS)
-		./fillit extern_file1.txt
+		#./fillit extern_file1.txt
 
 lib:
 		rm -rf libft
