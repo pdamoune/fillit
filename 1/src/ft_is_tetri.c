@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 12:40:29 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/18 02:45:20 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/19 04:20:29 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ char 	*ft_set_tetris(char *buf)
 	char *tetri;
 
 	tetri = ft_strnew(200);
+	ft_bzero(tetri, 201);
 	ft_memset(tetri, '.', 200);
 	ft_strcpy(tetri, buf);
 	*ft_strchr(buf, '\0') = '.';
@@ -31,7 +32,6 @@ int 	ft_is_tetri(int fd, char **tetris, char **lst_tetri)
 
 	letter = 'A';
 	ft_bzero(buf, 22);
-	ft_bzero(lst_tetri, 26);
 	while (read(fd, buf, 21) > 0)
 	{
 		if (!ft_parsing(buf))
@@ -52,9 +52,6 @@ int 	ft_is_tetri(int fd, char **tetris, char **lst_tetri)
 		*(ft_strrchr(lst_tetri[letter - 65], letter) + 1) = 0;
 		ft_bzero(buf, 22);
 		letter++;
-
 	}
-	lst_tetri[letter - 65] = ft_strdup("!");
-	tetris[letter - 65] = ft_strdup("!");
 	return (ft_sqrt_min((letter - 65) * 4));
 }

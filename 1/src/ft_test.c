@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/11 23:22:29 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/17 18:39:11 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/19 06:23:51 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ void 	ft_reinit(char **tetris, char **lst_tetri, int sqr_min)
 	}
 }
 
-void 	ft_test(char **tetris, char **lst_tetri, int sqr_min)
+void 	ft_test(char **tetris, char **lst_tetri, char *result, int sqr_min)
 {
+	(void)&result;
 	ft_reinit(tetris, lst_tetri, sqr_min);
 }

@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 22:37:00 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/18 02:47:39 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/23 06:44:30 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_add_dot(char *tetri)
 		}
 		if (count == 4)
 			break;
-		ft_strcpy(&tetri[i + 1], tmp);
+		ft_strcpy(&tetri[i + 1], &tmp[i]);
 		tetri[i] = '.';
 		ft_strcpy(tmp, tetri);
 		while (tmp[i] == '.')
@@ -47,8 +47,8 @@ int 	ft_bigger_square(char **tetris, char **lst_tetri, char *result, int sqr_min
 	i = 0;
 	j = 0;
 	k = ft_sqrt(ft_strlen(tetris[0]));
-	lst_tetri[sqr_min] = 0;
-	while (tetris[i][j] != '!')
+
+	while (tetris[i])
 	{
 		while (tetris[i][j] == '.')
 			j++;
@@ -61,10 +61,6 @@ int 	ft_bigger_square(char **tetris, char **lst_tetri, char *result, int sqr_min
 		j = 0;
 	}
 	ft_memset(result, '.', sqr_min);
-	// if (sqr_min > 200)
-	// {
-	// 	exit(42);
-	// }
 	result[sqr_min] = 0;
 	return (0);
 }
