@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 12:40:29 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/19 04:20:29 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/24 14:06:26 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,15 @@ char 	*ft_set_tetris(char *buf)
 int 	ft_is_tetri(int fd, char **tetris, char **lst_tetri)
 {
 	char			buf[21];
+	int				next;
 	int				letter;
 
 	letter = 'A';
 	ft_bzero(buf, 22);
 	while (read(fd, buf, 21) > 0)
 	{
+		buf[20] == '\n' ? next = 1 : 0;
+		ft_strlen(buf) == 20 ? next = 0 : 1;
 		if (!ft_parsing(buf))
 			return (0);
 		while (buf[0] == '.' && buf[4] == '.' && buf[8] == '.'
@@ -50,8 +53,9 @@ int 	ft_is_tetri(int fd, char **tetris, char **lst_tetri)
 		tetris[letter - 65][16] = 0;
 		lst_tetri[letter - 65] = ft_set_tetris(buf);
 		*(ft_strrchr(lst_tetri[letter - 65], letter) + 1) = 0;
-		ft_bzero(buf, 22);
 		letter++;
 	}
-	return (ft_sqrt_min((letter - 65) * 4));
+	if (next == 0)
+		return (ft_sqrt_min((letter - 65) * 4));
+	return (0);
 }
