@@ -1,50 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_test_tetri.c                                    :+:      :+:    :+:   */
+/*   ft_rem_dot.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/17 08:58:23 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/25 18:11:46 by pdamoune         ###   ########.fr       */
+/*   Created: 2017/01/25 18:33:58 by pdamoune          #+#    #+#             */
+/*   Updated: 2017/01/25 18:34:18 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fillit.h"
 
-/*
-** Test if the tetri *tmp fit int the string *result.
-*/
-
-int		ft_test_tetri(char *tmp, char *result, int c)
+void 	ft_rem_dot(char *tetri, int sqr_min)
 {
 	int		i;
-	int		j;
+	int		count;
+	char	tmp[200];
 
 	i = 0;
-	j = 0;
-
-	while (tmp[i] != c)
-		i++;
+	count = 0;
+	ft_strcpy(tmp, tetri);
 	while (tmp[i])
 	{
-		if (tmp[i] == c && result[i] == '.')
+		while (tmp[i] == '.')
+			i++;
+		while (ft_isalpha(tmp[i]) && count < 4)
 		{
-			result[i] = tmp[i];
-			j++;
+			i++;
+			count++;
 		}
-		i++;
+		if (count == 4)
+			break;
+		ft_strcpy(&tetri[i], &tmp[i + 1]);
+		ft_strcpy(tmp, tetri);
 	}
-	if (j == 4)
-		return (1);
-	while (j > 0)
-	{
-		if (result[i] == c)
-		{
-			result[i] = '.';
-			j--;
-		}
-		i--;
-	}
-	return (0);
+	*ft_strchr(tetri, 0) = '.';
+	tetri[sqr_min] = 0;
 }
