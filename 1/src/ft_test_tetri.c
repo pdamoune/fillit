@@ -6,15 +6,24 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 08:58:23 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/25 18:11:46 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/26 11:50:03 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fillit.h"
 
-/*
-** Test if the tetri *tmp fit int the string *result.
-*/
+void	ft_rem_tetri(char *result, int i, int j, int c)
+{
+	while (j > 0)
+	{
+		if (result[i] == c)
+		{
+			result[i] = '.';
+			j--;
+		}
+		i--;
+	}
+}
 
 int		ft_test_tetri(char *tmp, char *result, int c)
 {
@@ -23,7 +32,6 @@ int		ft_test_tetri(char *tmp, char *result, int c)
 
 	i = 0;
 	j = 0;
-
 	while (tmp[i] != c)
 		i++;
 	while (tmp[i])
@@ -37,14 +45,6 @@ int		ft_test_tetri(char *tmp, char *result, int c)
 	}
 	if (j == 4)
 		return (1);
-	while (j > 0)
-	{
-		if (result[i] == c)
-		{
-			result[i] = '.';
-			j--;
-		}
-		i--;
-	}
+	ft_rem_tetri(result, i, j, c);
 	return (0);
 }

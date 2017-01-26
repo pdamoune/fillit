@@ -11,9 +11,10 @@
 # **************************************************************************** #
 
 NAME		=	fillit
-SOURCES		=	main.c ft_fillit.c ft_is_tetri.c ft_parsing.c ft_init.c \
-ft_solver.c ft_remove_tetri.c ft_test_tetri.c ft_set_sqr.c ft_move_tetri.c \
-ft_big_sqr.c ft_low_sqr.c ft_rem_dot.c $(PATHLIB)/libft.a
+SOURCES		=	main.c ft_fillit.c ft_is_tetri.c ft_parsing.c \
+ft_solver.c ft_set_sqr.c ft_big_sqr.c ft_low_sqr.c ft_init.c \
+ft_test_tetri.c ft_move_tetri.c ft_remove_tetri.c ft_rem_dot.c \
+$(PATHLIB)/libft.a
 PATHLIB		=	libft
 PATHSRC 	=	src
 PATHINC		=	include
