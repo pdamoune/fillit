@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/24 16:58:36 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/26 11:31:52 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/26 13:16:28 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		ft_can_low(char *tetri, int sqr_min)
 	i = 15;
 	while (!ft_isalpha(tetri[i]))
 		i--;
-	if (i > sqr_min)
+	if (i > sqr_min || i == 3)
 		return (0);
 	i = 0;
 	ft_rem_dot(tetri, sqr_min);
