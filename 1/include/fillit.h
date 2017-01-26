@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 11:19:38 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/26 11:11:17 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/26 11:27:15 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int 	ft_solver(char **tetris, char **lst_tetri, char *result, int sqrt_min);
 
 int 	ft_set_sqr(char **tetris, char **lst_tetri, char *result, int sqr_min);
 int 	ft_big_sqr(char **tetris, char **lst_tetri, char *result, int sqr_min);
-int 	ft_lower_square(char **tetris, char *result, int sqr_min);
+int 	ft_low_sqr(char **tetris, char *result, int sqr_min);
 int 	ft_init(char **tetris, char **lst_tetri, char *result, int sqr_min);
 void 	ft_rem_dot(char *tetri, int sqr_min);
 int		ft_test_tetri(char *tmp, char *result, int c);
