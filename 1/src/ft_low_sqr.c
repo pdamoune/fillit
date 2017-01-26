@@ -6,15 +6,15 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/24 16:58:36 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/26 11:27:26 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/26 11:31:52 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fillit.h"
 
-int	ft_can_low(char *tetri, int sqr_min)
+int		ft_can_low(char *tetri, int sqr_min)
 {
-	int i;
+	int		i;
 
 	i = 15;
 	while (!ft_isalpha(tetri[i]))
@@ -26,10 +26,10 @@ int	ft_can_low(char *tetri, int sqr_min)
 	return (1);
 }
 
-int 	ft_low_sqr(char **tetris, char *result, int sqr_min)
+int		ft_low_sqr(char **tetris, char *result, int sqr_min)
 {
-	int i;
-	int j;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
