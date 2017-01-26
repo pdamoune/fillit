@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 15:31:20 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/25 18:33:34 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/26 10:47:26 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,22 +66,19 @@ int 	ft_move_vertical(char *tetri, char *lst_tetri, int sqr, int sqr_min)
 	return (1);
 }
 
-int		ft_move_tetri(char *tetri, char *lst_tetri, char *result, int sqr_min)
+int		ft_move(char *tetri, char *lst_tetri, int sqr_min)
 {
 	int		sqr;
 	int		k;
 	int		i;
 	char	tmp[200];
 
-	(void)&result;
 	ft_bzero(tmp, 201);
 	i = 0;
 	k = ft_sqrt(sqr_min);
 	sqr = k - 1;
 	if (!ft_can_move(tetri, k, sqr_min - 1))
 		return (0);
-	DEB
-	ft_putendl(tetri);
 	while (sqr < sqr_min && tetri[sqr] == '.')
 		sqr += k;
 	if (sqr - k != sqr_min - 1)
@@ -91,8 +88,3 @@ int		ft_move_tetri(char *tetri, char *lst_tetri, char *result, int sqr_min)
 	tetri[0] = '.';
 	return (1);
 }
-	// ft_putendl(tetri);
-		// ft_putendl(tetri);
-		// ft_putendl(lst_tetri);
-		// ft_putendl(result);
-		// ft_putnbr(i), ft_putendl(tetri);

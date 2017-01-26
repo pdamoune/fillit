@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 11:19:38 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/25 18:34:31 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/26 10:56:29 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@
 
 void	ft_fillit();
 char	*ft_parsing(char *str);
-void 	ft_test(char **tetris, char **lst_tetri, char *result, int sqr_min);
+int 	ft_test(char **tetris, char **lst_tetri, char *result, int sqr_min);
 int 	ft_is_tetri(int fd, char **tetris, char **lst_tetri);
-int 	ft_solver(char **tetris, char **lst_tetri, int sqrt_min);
+int 	ft_solver(char **tetris, char **lst_tetri, char *result, int sqrt_min);
 
-int 	ft_set_square(char **tetris, char **lst_tetri, char *result, int sqr_min);
-int 	ft_bigger_square(char **tetris, char **lst_tetri, char *result, int sqr_min);
+int 	ft_set_sqr(char **tetris, char **lst_tetri, char *result, int sqr_min);
+int 	ft_big_sqr(char **tetris, char **lst_tetri, char *result, int sqr_min);
 int 	ft_lower_square(char **tetris, char *result, int sqr_min);
 void 	ft_rem_dot(char *tetri, int sqr_min);
 int		ft_test_tetri(char *tmp, char *result, int c);
-int		ft_move_tetri(char *tetri, char *lst_tetri, char *result, int sqr_min);
+int		ft_move(char *tetri, char *lst_tetri, int sqr_min);
 void	ft_remove_tetri(char *tetri, char *result);
 
 

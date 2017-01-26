@@ -6,7 +6,7 @@
 /*   By: philippe <philippe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/24 18:39:43 by philippe          #+#    #+#             */
-/*   Updated: 2017/01/26 10:48:22 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/26 10:57:03 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		ft_combi(char **tetris, char **lst_tetri, char *result, int sqr_min)
 				sqr_min = ft_sqrt(sqr_min) + 1;
 				sqr_min *= sqr_min;
 				ft_test(tetris, lst_tetri, result, sqr_min);
-				k = ft_bigger_square(tetris, lst_tetri, result, sqr_min);
+				k = ft_big_sqr(tetris, lst_tetri, result, sqr_min);
 			}
 		}
 	}
@@ -50,7 +50,7 @@ int		ft_solver(char **tetris, char **lst_tetri, char *result, int sqr_min)
 		ft_strcpy(tetris[0], "AAAA");
 	else if (sqr_min == 4)
 		sqr_min = 9;
-	if ((sqr_min = ft_set_square(tetris, lst_tetri, result, sqr_min)) == 16)
+	if ((sqr_min = ft_set_sqr(tetris, lst_tetri, result, sqr_min)) == 16)
 		ft_test(tetris, lst_tetri, result, sqr_min);
 	ft_combi(tetris, lst_tetri, result, sqr_min);
 	while (i < (int)ft_strlen(result))

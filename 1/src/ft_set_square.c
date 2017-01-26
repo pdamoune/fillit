@@ -6,20 +6,20 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 08:52:02 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/26 10:51:35 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/26 10:56:25 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fillit.h"
 
-int		ft_set(char **tetris, char **lst_tetri, char *result, int sqr_min)
+int		ft_set_sqr(char **tetris, char **lst_tetri, char *result, int sqr_min)
 {
 	int	i;
 
 	i = 4;
 	while ((int)ft_strlen(tetris[0]) < sqr_min)
 	{
-		ft_bigger_square(tetris, lst_tetri, result, (i + 1) * (i + 1));
+		ft_big_sqr(tetris, lst_tetri, result, (i + 1) * (i + 1));
 		i++;
 	}
 	if (sqr_min == 9)
