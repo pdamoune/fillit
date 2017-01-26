@@ -6,59 +6,43 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 15:31:20 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/26 10:47:26 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/26 12:16:18 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fillit.h"
 #include <stdio.h>
 
-int 	ft_can_move(char *tetri, int k, int sqr_min)
+int		ft_can_move(char *tetri, int k, int sqr_min)
 {
 	int i;
 
 	i = 0;
 	if (tetri[sqr_min] != '.')
-	{
 		return (0);
-	}
 	if ((tetri[sqr_min - k] != '.'
 	|| tetri[sqr_min - (k * 2)] != '.')
 	&& (tetri[sqr_min - 1] != '.'
 	|| tetri[sqr_min - 2] != '.'))
-	{
 		return (0);
-	}
-	// while (i < (int)ft_strlen(tetri))
-	// {
-	// 	if (i % ft_sqrt(ft_strlen(tetri)) == 0)
-	// 		ft_putchar('\n');
-	// 	ft_putchar(tetri[i]);
-	// 	i++;
-	// }
 	return (1);
 }
 
-int 	ft_move_vertical(char *tetri, char *lst_tetri, int sqr, int sqr_min)
+int		ft_move_vertical(char *tetri, char *lst_tetri, int sqr_min)
 {
 	int i;
 	int k;
 
-
-	(void)&lst_tetri;
-	(void)&sqr;
 	i = 0;
 	while (tetri[i] == '.')
 		i++;
 	k = ft_sqrt(sqr_min);
 	k = ((i / k) + 1) * k;
 	i = sqr_min;
-	// k = ft_sqrt(sqr_min);
 	while (i < sqr_min - ft_sqrt(sqr_min) - 1 && tetri[i] == '.')
 		i++;
 	if (i != sqr_min)
-		return(0);
-		// ft_putendl(tetri);
+		return (0);
 	ft_memset(tetri, '.', sqr_min);
 	ft_memcpy(&tetri[k], lst_tetri, ft_strlen(lst_tetri));
 	if (sqr_min == 9)
@@ -82,7 +66,7 @@ int		ft_move(char *tetri, char *lst_tetri, int sqr_min)
 	while (sqr < sqr_min && tetri[sqr] == '.')
 		sqr += k;
 	if (sqr - k != sqr_min - 1)
-		return (ft_move_vertical(tetri, lst_tetri, sqr, sqr_min));
+		return (ft_move_vertical(tetri, lst_tetri, sqr_min));
 	ft_memcpy(tmp, tetri, 200);
 	ft_memcpy(&tetri[1], tmp, sqr_min - 1);
 	tetri[0] = '.';
