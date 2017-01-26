@@ -6,7 +6,7 @@
 /*   By: philippe <philippe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/24 18:39:43 by philippe          #+#    #+#             */
-/*   Updated: 2017/01/26 10:57:03 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/26 11:11:32 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		ft_combi(char **tetris, char **lst_tetri, char *result, int sqr_min)
 	int		i;
 	int		k;
 
-	i = ft_test(tetris, lst_tetri, result, sqr_min);
+	i = ft_init(tetris, lst_tetri, result, sqr_min);
 	k = 1;
 	while (tetris[i] && lst_tetri[i])
 	{
@@ -25,13 +25,13 @@ int		ft_combi(char **tetris, char **lst_tetri, char *result, int sqr_min)
 			i++;
 		else if (!(k = ft_move(tetris[i], lst_tetri[i], sqr_min)))
 		{
-			ft_test(&tetris[i], &lst_tetri[i], result, sqr_min);
+			ft_init(&tetris[i], &lst_tetri[i], result, sqr_min);
 			ft_remove_tetri(tetris[--i], result);
 			if (!(k = ft_move(tetris[i], lst_tetri[i], sqr_min)) && i == 0)
 			{
 				sqr_min = ft_sqrt(sqr_min) + 1;
 				sqr_min *= sqr_min;
-				ft_test(tetris, lst_tetri, result, sqr_min);
+				ft_init(tetris, lst_tetri, result, sqr_min);
 				k = ft_big_sqr(tetris, lst_tetri, result, sqr_min);
 			}
 		}
@@ -51,7 +51,7 @@ int		ft_solver(char **tetris, char **lst_tetri, char *result, int sqr_min)
 	else if (sqr_min == 4)
 		sqr_min = 9;
 	if ((sqr_min = ft_set_sqr(tetris, lst_tetri, result, sqr_min)) == 16)
-		ft_test(tetris, lst_tetri, result, sqr_min);
+		ft_init(tetris, lst_tetri, result, sqr_min);
 	ft_combi(tetris, lst_tetri, result, sqr_min);
 	while (i < (int)ft_strlen(result))
 	{
