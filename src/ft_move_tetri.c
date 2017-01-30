@@ -6,12 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 15:31:20 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/30 17:01:53 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/30 18:15:09 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fillit.h"
-#include <stdio.h>
 
 int		ft_can_move(char *tetri, int k, int sqr_min)
 {

@@ -6,12 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 12:40:29 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/26 12:22:55 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/30 18:15:03 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fillit.h"
-#include <stdio.h>
 
 void	ft_move_top(char *buf)
 {

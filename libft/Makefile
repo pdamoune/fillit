@@ -6,7 +6,7 @@
 #    By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 18:34:34 by pdamoune          #+#    #+#              #
-#    Updated: 2017/01/30 12:21:25 by pdamoune         ###   ########.fr        #
+#    Updated: 2017/01/30 19:09:51 by pdamoune         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,19 +35,19 @@ OBJETS	=	$(patsubst %.c,$(PATHOBJ)/%.o,$(SOURCES))
 all: $(NAME)
 
 $(PATHOBJ)/%.o: $(PATHSRC)/%.c
-	@mkdir -p $(PATHOBJ)
+	mkdir -p $(PATHOBJ)
 	$(CC) $(CFLAGS) -I $(PATHINC) -c $< -o $@
 
 $(NAME): $(OBJETS)
-		@ar rc $(NAME) $(OBJETS)
-		@ranlib $(NAME)
+		ar rc $(NAME) $(OBJETS)
+		ranlib $(NAME)
 
 clean:
-		@rm -rf $(PATHOBJ)
+		rm -rf $(PATHOBJ)
 
 fclean: clean
-		@rm -f $(NAME)
+		rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: clean, fclean, re, all, $(NAME)
+.PHONY: clean, fclean, re, all
