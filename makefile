@@ -26,24 +26,24 @@ OBJETS		=	$(patsubst %.c,$(PATHSRC)/%.c,$(SOURCES))
 all: $(NAME)
 
 $(NAME): library
-		@$(CC) $(CFLAGS) -o $(NAME) $(OBJETS) $(HEADERS)
+		$(CC) $(CFLAGS) -o $(NAME) $(OBJETS) $(HEADERS)
 
 lib:
 		rm -rf libft
 		ln -s ~/Documents/42/projets_42/library libft
 
 library:
-		@make -C libft/
+		make -C libft/
 
 clrlib:
-		@make fclean -C libft/
+		make fclean -C libft/
 
 clean:
-		@make clean -C libft/
+		make clean -C libft/
 		rm -rf $(PATHOBJ)
 
 fclean: clean
-		@make fclean -C libft/
+		make fclean -C libft/
 		rm -f $(NAME)
 
 re: fclean all
