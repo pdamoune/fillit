@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 15:31:20 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/26 12:16:18 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/30 17:01:53 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int		ft_move(char *tetri, char *lst_tetri, int sqr_min)
 	int		i;
 	char	tmp[200];
 
-	ft_bzero(tmp, 201);
+	ft_bzero(tmp, 200);
 	i = 0;
 	k = ft_sqrt(sqr_min);
 	sqr = k - 1;
