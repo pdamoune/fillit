@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 10:57:50 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/30 19:18:24 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/01/31 22:18:24 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,9 @@ void	ft_fillit(char *argv)
 	ft_bzero(tetris, 216);
 	ft_bzero(result, 200);
 	ft_memset(result, '.', 196);
-	fd = open(argv, O_RDONLY);
-	if (fd == -1)
+	if ((fd = open(argv, O_RDONLY)) == -1)
 		ft_putendl("error");
-	sqr_min = ft_is_tetri(fd, tetris, lst_tetri);
-	if (sqr_min == 0)
+	else if ((sqr_min = ft_is_tetri(fd, tetris, lst_tetri)) == 0)
 		ft_putendl("error");
 	else
 		ft_solver(tetris, lst_tetri, result, sqr_min * sqr_min);
