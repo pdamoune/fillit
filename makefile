@@ -19,7 +19,7 @@ PATHLIB		=	libft
 PATHSRC 	=	src
 PATHINC		=	include
 HEADERS		=	-I $(PATHINC) -I $(PATHLIB)/$(PATHINC)
-CFLAGS		=	-Wall -Wextra -Werror -g
+CFLAGS		=	-Wall -Wextra -Werror
 CC			=	clang
 OBJETS		=	$(patsubst %.c,$(PATHSRC)/%.c,$(SOURCES))
 
