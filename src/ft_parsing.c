@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 11:36:38 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/26 13:07:09 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/07 12:23:42 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char		*ft_parsing(char *str)
 {
 	char	tetri_valid[189];
-	char	*connasse;
+	char	*tmp;
 	int		i;
 
 	i = 0;
@@ -33,8 +33,8 @@ char		*ft_parsing(char *str)
 		if (str[i] == '#' && str[i - 1] == '#')
 			if (i / 4 != (i - 1) / 4)
 				return (NULL);
-	if (ft_strstr(tetri_valid, (connasse = ft_strctrim(str, '.'))) == 0)
+	if (ft_strstr(tetri_valid, (tmp = ft_strctrim(str, '.'))) == 0)
 		return (NULL);
-	ft_strdel(&connasse);
+	ft_strdel(&tmp);
 	return (str);
 }

@@ -6,13 +6,13 @@
 /*   By: philippe <philippe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/24 18:39:43 by philippe          #+#    #+#             */
-/*   Updated: 2017/01/26 11:11:32 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/07 12:49:59 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fillit.h"
 
-int		ft_combi(char **tetris, char **lst_tetri, char *result, int sqr_min)
+void	ft_combi(char **tetris, char **lst_tetri, char *result, int sqr_min)
 {
 	int		i;
 	int		k;
@@ -36,7 +36,6 @@ int		ft_combi(char **tetris, char **lst_tetri, char *result, int sqr_min)
 			}
 		}
 	}
-	return (1);
 }
 
 int		ft_solver(char **tetris, char **lst_tetri, char *result, int sqr_min)
@@ -60,5 +59,6 @@ int		ft_solver(char **tetris, char **lst_tetri, char *result, int sqr_min)
 		ft_putchar(result[i]);
 		i++;
 	}
+	ft_putchar('\n');
 	return (0);
 }
