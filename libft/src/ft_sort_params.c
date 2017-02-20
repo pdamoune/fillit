@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 13:14:17 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/21 03:02:51 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:11:14 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Affiche les arguments reçus en ligne de commande.

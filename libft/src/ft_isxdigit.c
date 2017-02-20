@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 18:50:02 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/19 23:33:19 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:09:55 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Checks for a hexadecimal digits, that is, one of

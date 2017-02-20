@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 21:47:36 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/22 03:37:22 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:11:45 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Alloue (avec malloc(3)) et retourne une copie de la chaine

@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 09:37:55 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/21 10:16:06 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:04:34 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Converts the initial portion of the string pointed to by str to int.

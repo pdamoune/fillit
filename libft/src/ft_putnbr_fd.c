@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 20:25:20 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/11 20:25:21 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:11:04 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Ecrit l’entier n sur le descripteur de fichier fd.

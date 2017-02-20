@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 09:33:59 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/20 04:00:09 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:12:27 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Compares at most the first n bytes of str1 and str2

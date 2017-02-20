@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 15:10:50 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/13 21:34:05 by philippedamoune  ###   ########.fr       */
+/*   Updated: 2017/02/20 07:13:12 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Echange les valeurs des pointeurs a et b en passant par c.

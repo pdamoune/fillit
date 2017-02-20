@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 12:09:29 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/08 19:18:32 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:12:13 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Computes the length of the string str up to, but not including the

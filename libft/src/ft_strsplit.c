@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 22:31:59 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/21 03:57:03 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:12:55 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Alloue (avec malloc(3)) et retourne un tableau de chaines de

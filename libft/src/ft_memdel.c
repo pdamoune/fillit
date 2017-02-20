@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 20:28:52 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/19 22:30:36 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 06:01:54 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Prend en paramètre l’adresse d’un pointeur dont la zone pointée

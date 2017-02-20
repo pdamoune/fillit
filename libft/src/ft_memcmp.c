@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 16:23:15 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/20 01:36:12 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:10:29 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** compares the first n bytes (each interpreted as unsigned char) of the memory

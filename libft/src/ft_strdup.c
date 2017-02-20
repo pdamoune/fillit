@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 12:24:06 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/20 02:13:09 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:11:53 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** returns a pointer to a new string which is a duplicate of the string s.

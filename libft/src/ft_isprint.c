@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 10:52:52 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/08 18:47:42 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:05:32 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Checks for any printable character including space.

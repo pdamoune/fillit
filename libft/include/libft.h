@@ -6,7 +6,7 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 11:42:56 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/30 12:21:00 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:14:09 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,7 @@ int			ft_strdift(const char *str1, const char *str2);
 void		ft_bzero(void *s, size_t n);
 void		ft_memdel(void **ap);
 int			ft_memcmp(const void *str1, const void *str2, size_t n);
+void		*ft_memrealloc(void *ptr, size_t old_size, size_t new_size);
 void		*ft_memchr(const void *str, int c, size_t n);
 void		*ft_memcpy(void *dest, const void *src, size_t n);
 void		*ft_memccpy(void *dest, const void *src, int c, size_t n);
@@ -127,6 +128,7 @@ t_list		*ft_lstnew(void const *content, size_t content_size);
 void		ft_lstadd(t_list **alst, t_list *new);
 void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+t_list		*ft_lstfind(t_list *list, void *data, int (*cmp)());
 void		ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 

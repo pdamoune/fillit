@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 15:33:14 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/20 01:44:32 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:11:24 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Renvoie la racine carrée entière d’un nombre si elle existe,

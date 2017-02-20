@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 16:07:45 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/20 01:35:27 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:10:25 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Scans the initial n bytes of the memory area pointed to by s for the first

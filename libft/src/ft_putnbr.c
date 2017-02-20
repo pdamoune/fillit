@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 16:04:35 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/10 16:05:45 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:11:06 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Affiche l’entier n sur la sortie standard.

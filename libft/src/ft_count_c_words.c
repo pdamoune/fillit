@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/12 16:57:04 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/17 19:03:31 by philippedamoune  ###   ########.fr       */
+/*   Updated: 2017/02/20 07:05:02 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Permet de compter le nombre de mots dans str, avec comme separateur c.

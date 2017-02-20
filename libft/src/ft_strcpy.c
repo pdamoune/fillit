@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 13:41:38 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/20 02:06:59 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:11:39 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Copies the string pointed to by src, including the terminating null byte

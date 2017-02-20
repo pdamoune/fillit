@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 09:18:18 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/15 20:27:26 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:11:36 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Compares the two strings s1 and s2. It returns an integer less than, equal

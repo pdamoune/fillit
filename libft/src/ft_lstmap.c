@@ -6,11 +6,11 @@
 /*   By: philippe <philippe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 18:25:06 by philippe          #+#    #+#             */
-/*   Updated: 2016/11/19 22:58:28 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:10:15 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Parcourt la liste lst en appliquant à chaque maillon la fonction

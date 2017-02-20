@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 14:48:39 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/20 04:46:26 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:10:32 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Copies n bytes from memory area src to memory area dest. The memory areas

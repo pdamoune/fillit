@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 13:46:21 by pdamoune          #+#    #+#             */
-/*   Updated: 2017/01/17 16:22:19 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:04:50 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Sets the first n bytes of the area starting at s to zero (bytes

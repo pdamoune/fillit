@@ -6,11 +6,11 @@
 /*   By: philippe <philippe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 18:24:55 by philippe          #+#    #+#             */
-/*   Updated: 2016/11/21 13:34:19 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:10:03 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Ajoute l’élément new en tête de la liste.

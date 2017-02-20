@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 18:20:34 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/13 22:12:57 by philippedamoune  ###   ########.fr       */
+/*   Updated: 2017/02/20 07:09:45 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Checks for an uppercase letter.

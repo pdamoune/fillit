@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 18:31:21 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/08 18:43:19 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:05:19 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Checks for a blank character; that is, a space or a tab.

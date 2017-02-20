@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 10:16:00 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/19 23:15:09 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:05:09 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Checks for an alphanumeric character

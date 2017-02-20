@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 16:14:10 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/21 03:26:16 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:12:11 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Appends the NUL-terminated string src to the end of dst. It will append at

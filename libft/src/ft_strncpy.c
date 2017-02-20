@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:12:11 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/20 04:44:51 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:12:30 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Copies up to n characters from the string pointed to, by src to dest. In a

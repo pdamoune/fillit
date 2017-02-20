@@ -6,11 +6,11 @@
 /*   By: philippe <philippe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 18:25:08 by philippe          #+#    #+#             */
-/*   Updated: 2016/11/19 20:50:35 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:10:19 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 /*
 ** Alloue (avec malloc(3)) et retourne un maillon “frais”. Les

@@ -6,11 +6,11 @@
 /*   By: pdamoune <pdamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 17:02:40 by pdamoune          #+#    #+#             */
-/*   Updated: 2016/11/22 17:59:10 by pdamoune         ###   ########.fr       */
+/*   Updated: 2017/02/20 07:04:56 by pdamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 char		*ft_conv_bin(char *str, int b_one, int b_zero)
 {
